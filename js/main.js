@@ -1,0 +1,1 @@
+let numberOfCats = 3;
