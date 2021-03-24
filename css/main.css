@@ -261,3 +261,121 @@ textarea {
   }
 }
 
+.grid-container {
+
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  min-width: 1000px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(10, 10%);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  min-height: 500px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.grid__item--topleft {
+  grid-column: 2 / 12;
+  grid-row: 2 / 7;
+  background: #83BC00;
+  clip-path: polygon(0%0%,87.5%0%,84%41%,71.3%42%,70%95%,0%80%,0%0%);
+}
+.grid__item--topright {
+  grid-column: 10 / 20;
+  grid-row: 2 / 7;
+  background: #EA522B;
+  clip-path: polygon(8.5%0%,100%0%,100%95%,29.7%80%,30.7%38%,5%41%,8.5%0%);
+}
+.grid__item--bottomleft {
+  grid-column: 2 / 12;
+  grid-row: 5 / 10;
+  background: #FBBC08;
+  clip-path: polygon(0%22%,70%37%,69.4%62%,82%60.5%,79%100%,0%100%,0%22%);
+
+}
+.grid__item--bottomright {
+
+  grid-column: 10 / 20;
+  grid-row: 5 / 10;
+  background: #2FA1EF;
+  clip-path: polygon(100%100%,0%100%,3%60.5%,28.7%58%,29.7%22%,100%37%,100%100%);
+}
+
+.grid__item--center {
+  grid-column: 9 / 13;
+  z-index: 3;
+  grid-row: 4 / 8;
+  background: purple;
+  clip-path: polygon(5% 5%,0% 100%,95% 95%,100% 0%,5% 5%);
+}
+.grid__item--center:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -ms-transition:  -ms-transform 0.25s;
+  transition:  transform 0.25s;
+}
+.grid__item{
+
+  -webkit-transition: -webkit-transform 0.1s;
+  -moz-transition: -moz-transform 0.1s;
+  -ms-transition: -ms-transform 0.1s;
+  transition: transform 0.1s;
+  z-index: 1;
+}
+.grid__item--left:hover{
+  overflow: hidden;
+  -webkit-transform: scale(1.05) translate(5%,0);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05) translate(-2%, 0);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -ms-transition:  -ms-transform 0.25s;
+  transition:  transform 0.25s;
+  z-index: 2;
+}
+.grid__item--right:hover{
+  -webkit-transform: scale(1.05) translate(5%,0);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05) translate(2%, 0);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -ms-transition:  -ms-transform 0.25s;
+  transition:  transform 0.25s;
+  z-index: 2;
+}
+.inner__item--topleft {
+  clip-path: polygon(1%2%,86.3%2%,83%39%,70.3%40%,69%93%,1%78%,1%2%);
+}
+.inner__item--topright {
+  clip-path: polygon(9.5%2%,99%2%,99%93%,30.7%78%,31.7%36%,6.2%39%,9.3%2%);
+}
+.inner__item--bottomleft {
+  clip-path: polygon(1%24%,69%39%,68.5%64%,81%62.5%,78.2%98%,1%98%,1%24%);
+
+}
+.inner__item--bottomright {
+  clip-path: polygon(99%98%,1%98%,3.7%62.5%,29.5%60%,30.5%24%,99%39%,99%98%);
+}
+
+.inner__item{
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
